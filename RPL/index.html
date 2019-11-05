@@ -14,7 +14,8 @@
     <section>
         <div>
             <div><img src="lebihtamvan.jpg" alt="avatar" class="avatar" id="poto">
-            <button onclick="document.getElementById('poto').src='supertamvan.jpg' ; document.getElementById('poto2').src='lebihtamvan.jpg'">Click for surprise</button></div>
+            <input type="button" onclick="gantiFoto();" id="buttonClick" value="Click for Surprise!">
+        </div>
         </div>
         <div>
             <div class="my-name">Adam Abelard Garibaldi</div>
@@ -139,4 +140,16 @@
 
    </div>
 </body>
+<script>
+   function gantiFoto(){
+        if(document.getElementById('poto').src == "http://127.0.0.1:5500/lebihtamvan.jpg"){
+            document.getElementById('poto').src ='supertamvan.jpg';
+            document.getElementById('buttonClick').value = 'Click again to see cooler me';
+        }
+        else document.getElementById('poto').src ='lebihtamvan.jpg';
+        document.getElementById('buttonClick').value = 'Click for Surprise!';
+
+        // console.log(document.getElementById('poto').src);
+    }
+</script>
 </html>
